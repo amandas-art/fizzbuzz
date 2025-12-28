@@ -15,12 +15,21 @@ header {
   text-align: center;
   margin-bottom: 20px;
 }
+
+/* Controls layout */
 .controls {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  align-items: center;
+  gap: 16px;
   justify-content: center;
   margin-bottom: 20px;
+}
+
+.controls-left {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .controls label {
@@ -31,7 +40,10 @@ header {
 
 .controls input {
   padding: 6px;
+  font-size: 14px;
 }
+
+/* Buttons */
 button {
   padding: 10px 16px;
   border: none;
@@ -39,39 +51,28 @@ button {
   background: #4dabf7;
   color: white;
   border-radius: 6px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s;
 }
 
-/* Hover: scale + shadow */
 button:hover {
   transform: scale(1.08);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
 }
+
+/* Dark mode button alignment */
+.dark-btn {
+  margin-left: auto;
+}
+
+/* Main grid */
 main {
   display: grid;
   gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  justify-content: center;
 }
 
-/* 📱 Phone: < 576px */
-@media (max-width: 575px) {
-  main {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* 📱 Tablet: < 992px */
-@media (min-width: 576px) and (max-width: 991px) {
-  main {
-    grid-template-columns: repeat(5, 1fr);
-  }
-}
-
-/* 💻 Desktop: ≥ 992px */
-@media (min-width: 992px) {
-  main {
-    grid-template-columns: repeat(10, 1fr);
-  }
-}
+/* Boxes */
 .box {
   height: 80px;
   display: flex;
@@ -79,8 +80,15 @@ main {
   justify-content: center;
   font-weight: bold;
   border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s;
 }
 
+.box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Colors */
 .fizzbuzz {
   background: #841818;
   color: white;
@@ -100,6 +108,8 @@ main {
   background: #dee2e6;
   font-size: 18px;
 }
+
+/* Dark mode */
 body.dark {
   background: #121212;
   color: #f1f1f1;
@@ -110,20 +120,8 @@ body.dark .number {
   color: white;
 }
 
-.controls {
-  display: flex;
-  align-items: center;
-  gap: 16px;
+body.dark button {
+  background: #4dabf7;
+  color: #121212;
 }
 
-/* Left group stays together */
-.controls-left {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-/* Push dark mode to the right */
-.dark-btn {
-  margin-left: auto;
-}
