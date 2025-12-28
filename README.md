@@ -1,0 +1,1 @@
+For the final homework I created a FizzBuzz generator. For this project I used HTML, CSS and JavaScript. I used the functions which I learned from previouse projects an what was required from this homework itself as well. 
