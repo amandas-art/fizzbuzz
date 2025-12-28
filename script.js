@@ -8,6 +8,11 @@ function clearGrid() {
     grid.removeChild(grid.firstChild);
   }
 }
+if (fizz <= 0 || buzz <= 0 || start > end) {
+  alert("Please enter valid values.");
+  return;
+}
+
 function generateFizzBuzz() {
   clearGrid();
 
@@ -43,6 +48,10 @@ clearBtn.addEventListener("click", clearGrid);
 
 darkModeBtn.addEventListener("click", () => {
   document.body.classList.toggle("dark");
+  darkModeBtn.textContent =
+    document.body.classList.contains("dark")
+      ? "Light Mode"
+      : "Dark Mode";
 });
 
 // Auto-generate on load

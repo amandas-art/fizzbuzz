@@ -87,17 +87,18 @@ main {
 }
 
 .fizz {
-  background: #4dabf7;
+  background: #0678d5;
   color: white;
 }
 
 .buzz {
-  background: #51cf66;
+  background: #cd56c7;
   color: white;
 }
 
 .number {
   background: #dee2e6;
+  font-size: 18px;
 }
 body.dark {
   background: #121212;
@@ -107,4 +108,22 @@ body.dark {
 body.dark .number {
   background: #2c2c2c;
   color: white;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Left group stays together */
+.controls-left {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Push dark mode to the right */
+.dark-btn {
+  margin-left: auto;
 }
