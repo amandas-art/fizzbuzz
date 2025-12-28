@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FizzBuzz Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>FizzBuzz Generator</h1>
+  </header>
+
+  <section class="controls">
+    <label>Start
+      <input type="number" id="startValue" value="1">
+    </label>
+
+    <label>End
+      <input type="number" id="endValue" value="100">
+    </label>
+
+    <label>Fizz
+      <input type="number" id="fizzValue" value="3">
+    </label>
+
+    <label>Buzz
+      <input type="number" id="buzzValue" value="5">
+    </label>
+
+    <button id="generateBtn">Generate</button>
+    <button id="clearBtn">Clear</button>
+    <button id="darkModeBtn">Dark Mode</button>
+  </section>
+
+  <main id="grid"></main>
+
+  <script src="script.js"></script>
+</body>
+</html>
